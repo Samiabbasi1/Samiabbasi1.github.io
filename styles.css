@@ -19,7 +19,7 @@ header {
     background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: #fff;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 20px;
     position: relative;
     overflow: hidden;
 }
@@ -53,14 +53,14 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #00bfff;
     margin-bottom: 20px;
     text-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #b0c4de;
 }
 
@@ -72,6 +72,7 @@ nav ul li a:hover {
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.3s ease;
+    display: inline-block;
 }
 
 .cta-button:hover {
@@ -107,7 +108,7 @@ h2 {
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    width: calc(33% - 40px);
+    width: calc(33% - 20px);
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
@@ -164,13 +165,37 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
     .project-card {
-        width: calc(50% - 40px);
+        width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+    }
+
     .project-card {
-        width: 100%;
+        width: calc(100% - 20px);
     }
 }

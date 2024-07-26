@@ -1,181 +1,173 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+/* Reset some basic elements for better consistency */
+body, h1, h2, p, ul, li, a, input, textarea, button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Basic styling */
+/* Custom font import for a futuristic look */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: #0a0a0a;
-    color: #fff;
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
 header {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
+    background: #0f3460;
+    padding: 20px 0;
+    border-bottom: 1px solid #ffffff20;
     position: relative;
-    overflow: hidden;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    gap: 15px;
 }
 
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #00bfff;
+nav a {
+    color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #ff1493;
+nav a:hover {
+    color: #ff5733;
 }
 
 .hero {
-    position: relative;
-    z-index: 1;
+    text-align: center;
+    padding: 50px 0;
+    background: linear-gradient(135deg, #0f3460, #16213e);
+    box-shadow: 0 0 15px #ffffff20;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    color: #00bfff;
+    font-size: 3em;
     margin-bottom: 20px;
-    text-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
 }
 
 .hero p {
-    font-size: 1.5rem;
-    color: #b0c4de;
+    font-size: 1.5em;
+    margin-bottom: 30px;
 }
 
 .cta-button {
-    background: #00bfff;
-    color: #fff;
+    background: #ff5733;
+    color: #ffffff;
     padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
 }
 
 .cta-button:hover {
-    background: #ff1493;
-    transform: scale(1.05);
+    background: #c70039;
 }
 
 section {
-    padding: 60px 20px;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
+    padding: 0 20px;
 }
 
-h2 {
-    font-size: 2.5rem;
-    color: #00bfff;
+#about h2, #projects h2, #contact h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
+    position: relative;
+}
+
+#about h2::after, #projects h2::after, #contact h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ff5733;
+    margin: 10px auto;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    margin-top: 20px;
+    color: #dcdde1;
 }
 
 .project-grid {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .project-card {
-    background: #1e1e1e;
-    border: 1px solid #00bfff;
-    border-radius: 10px;
+    background: #1a1a2e;
     padding: 20px;
-    margin: 10px;
-    width: calc(33% - 40px);
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s;
+    box-shadow: 0 0 15px #ffffff20;
 }
 
 .project-card:hover {
-    background: #2a2a2a;
-    transform: scale(1.02);
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1em;
+    line-height: 1.4em;
+    color: #dcdde1;
 }
 
 form {
     max-width: 600px;
     margin: 0 auto;
-    text-align: left;
+    background: #1a1a2e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ffffff20;
 }
 
-form input, form textarea {
+input, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
-    background: #2a2a2a;
-    color: #fff;
+    font-size: 1em;
+    color: #ffffff;
+    background: #0f3460;
 }
 
-form textarea {
-    height: 150px;
-    resize: vertical;
-}
-
-button {
-    background: #00bfff;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-    background: #ff1493;
-    transform: scale(1.05);
+button.cta-button {
+    width: 100%;
+    font-size: 1.2em;
 }
 
 footer {
-    background: #1e1e1e;
-    padding: 20px;
+    background: #0f3460;
+    padding: 20px 0;
     text-align: center;
-    color: #b0c4de;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    border-top: 1px solid #ffffff20;
 }
 
-@media (max-width: 768px) {
-    .project-card {
-        width: calc(50% - 40px);
-    }
+footer p {
+    font-size: 1em;
+    color: #dcdde1;
 }
-
-@media (max-width: 480px) {
-    .project-card {
-        width: 100%;
-    }
-}
-
-/* Additional styles for a futuristic look */
-body {
-    background-image: linear-gradient(to bottom, #0
